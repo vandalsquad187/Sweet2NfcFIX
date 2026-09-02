@@ -1,0 +1,26 @@
+#!/sbin/sh
+# Magisk simple module installer
+MODDIR=${0%/*}
+. $MODDIR/../../../util_functions.sh 2>/dev/null || {
+  ui_print "! util_functions.sh not found"
+  exit 1
+}
+print_modname() {
+  ui_print "**********************************"
+  ui_print "    NFC Fix for sweet2"
+  ui_print "**********************************"
+}
+on_install() {
+  ui_print "- Extracting module files"
+  # Nothing special, Magisk does the mounting automatically
+}
+set_permissions() {
+  set_perm_recursive $MODPATH/system/vendor/bin 0 0 0755 0755
+  set_perm_recursive $MODPATH/system/vendor/lib 0 0 0644 0644
+  set_perm_recursive $MODPATH/system/vendor/lib64 0 0 0644 0644
+  set_perm_recursive $MODPATH/system/vendor/etc 0 0 0644 0644
+  set_perm_recursive $MODPATH/system/product 0 0 0644 0644
+  # Make executables actually executable
+  set_perm $MODPATH/system/vendor/bin/hw/vendor.nxp.hardware.nfc@2.0-service 0 0 0755
+  set_perm $MODPATH/system/vendor/bin/nqnfcinfo 0 0 0755
+}

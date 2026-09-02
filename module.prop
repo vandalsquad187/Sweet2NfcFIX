@@ -1,0 +1,6 @@
+id=nfc_sweet2_fix
+name=NFC sweet2 config fix
+version=v1.3-lottery
+versionCode=13
+author=dp, cynosureforalleyes
+description=sweet2 PN557 lottery: auto sweet2-fix vs stock (0x85) via getprop, RF, chcon, HAL restart
