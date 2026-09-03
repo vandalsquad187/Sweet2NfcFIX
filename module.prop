@@ -1,6 +1,6 @@
 id=nfc_sweet2_fix
 name=NFC sweet2 config fix
-version=v1.3.3-lottery
-versionCode=16
-author=badazz89,dp,cynosureforalleyes
-description=sweet2 PN557 v3.3: static overlay fix conf (binds invisible to HAL ns), RF 0x85 removed
+version=v1.4
+versionCode=17
+author=dp, cynosureforalleyes, badazz89
+description=sweet2 PN557: static overlay fix conf, RF 0x85 removed, HAL namespace fix

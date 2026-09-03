@@ -2,7 +2,7 @@
 # v3.3: main conf via static overlay (binds invisible to HAL ns), binds fallback only
 MODDIR=${0%/*}
 LOG=/data/local/tmp/nfc_fix.log
-echo "[$(date '+%H:%M:%S')] service start (v3.3)" >> "$LOG" 2>/dev/null
+echo "[$(date '+%H:%M:%S')] service start (v1.4)" >> "$LOG" 2>/dev/null
 if [ -e /dev/nq-nci ]; then
     ln -sf /dev/nq-nci /dev/nxp-nci 2>/dev/null
     chown nfc:nfc /dev/nq-nci 2>/dev/null; chmod 660 /dev/nq-nci 2>/dev/null
